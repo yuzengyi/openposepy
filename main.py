@@ -1,3 +1,8 @@
+import sys
+
+from PyQt5.QtWidgets import QApplication
+
+from Mediabofang import myMainWindow
 from Thresholding import Kmeans_threshold
 from ctp import getctp
 from dtp import getdtp
@@ -28,3 +33,7 @@ CTP=sum(Ctp)
 DTP=sum(Dtp)
 ITP=sum(Itp)
 print(ITP)
+app = QApplication(sys.argv)
+vieo_gui = myMainWindow()
+vieo_gui.show()
+sys.exit(app.exec_())
